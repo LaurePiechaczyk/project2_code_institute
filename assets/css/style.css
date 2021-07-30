@@ -1,0 +1,51 @@
+h1, h2, p {
+    color : #3a3a3a;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  text-align: center;
+}
+
+.button {
+  background-color: #3a3a3a;
+  color: white;
+  padding: 10px 10px;
+  border-radius: 12px;
+  display: inline-flex;
+  text-decoration: none;
+}
+
+/*  #######   Memo Part #######  */
+#memory-container {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#grille {
+    display: inline-grid;
+    grid-template: repeat(2, 200px) / repeat(3, 200px);
+    background-color:#3e5ba4; 
+    border: 2px solid#3e5ba4; 
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 5px; 
+    border: 2px solid#3e5ba4  ; 
+    background-color: beige;
+}
+
+
+
+  
+
+ 

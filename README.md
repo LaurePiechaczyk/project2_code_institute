@@ -1,5 +1,7 @@
 <h1 align="center"> Project 2 for Code Institute formation | German verbs with Prepositions - HTML & CSS & js</h1>
 
+python3 -m http.server
+
 [View the live project here.]()
 
 German verbs with Prepositions is a website built as part of a project for the [code institute](https://codeinstitute.net/) (training to become a web developer) to develop and show my skills in javascript. 
