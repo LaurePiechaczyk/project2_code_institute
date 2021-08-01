@@ -44,7 +44,31 @@ body {
     background-color: beige;
 }
 
+@media screen and (max-width: 750px) { 
+#grille {
+    grid-template: repeat(3, 150px) / repeat(2, 150px);
+}
 
+h1, h2, p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+h1 {
+  font-size: 140%;
+  }
+  
+h2 {
+font-size: 110%;
+}
+
+#memory-container {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+} /* Close  @media screen and (max-width: 750px) */
 
   
 
