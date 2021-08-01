@@ -139,11 +139,11 @@ function getIndexPreposition() {
             if (verbsWithPrepositions[i].preposition == gamePrepositions[2]) {
                 indexPrepositionGame[2].push(i);
             };
-    }//end for loop
- };//end function
+    }; //end for loop
+ }; //end function
 getIndexPreposition();
 
-// Now we need only pairs. Will be done in array nested in array
+// Now we need only pairs. 
 function chooseTwoPrepositions(){
     for (let i = 0 ; i < 3 ; i++ ) {
             let firstPrepposition = Math.floor(Math.random() * indexPrepositionGame[i].length); 
@@ -166,5 +166,60 @@ function displayVerbsAndPrepositions() {
 };
 displayVerbsAndPrepositions();
 
+// ########## PART2  Make the game working ###########
+let cards = document.querySelectorAll('.card');
+let cardIsReturned = false;
+let firstCard, secondCard;
+let locked = false;
 
-// ########## PART2  ###########
+cards.forEach(card => {
+    card.addEventListener('click', returnCard)
+    } );
+
+function returnCard() { 
+        if(locked) return;   // cards cannot be return/clicked at some times of the game
+
+        this.childNodes[1].classList.toggle('active'); // it turns the card when the card is clicked clicked
+
+        if(!cardIsReturned){ // it is like saying cardIsReturned == false. It means that no card has been turned. When one card has already been turned it would be cardIsReturned == True
+            cardIsReturned = true;
+            firstCard = this;
+            return; // if it is the first card which is returned, the function is stopped here to let the player returning another card.
+        }
+    
+        secondCard = this; // at this point of the function, we have 2 cards that have been returned. We can then check if they are correct pairs
+
+        pair(); //function to take actions if the pair is correct or not
+        
+        cardIsReturned = false; // It is to let the player choose other pairs.
+};
+
+function pair(){
+
+    if(firstCard === secondCard) {
+       return
+    } ; // it is if the person clicks twice on the same card, the player can choose othercards
+
+    if(firstCard.getAttribute('data-attr') === secondCard.getAttribute('data-attr')) {
+        firstCard.removeEventListener('click', returnCard);
+        secondCard.removeEventListener('click', returnCard); // When pair is correct, the player cannot click anymore to return them
+    }  
+    else {
+        locked = true; // there is a Timeout and during this time, the player cannot click on any card
+        setTimeout(() => {
+            firstCard.childNodes[1].classList.remove('active');
+            secondCard.childNodes[1].classList.remove('active'); //To return the card so the player can continue to play with this card (because the pair is not correct)
+            locked = false; // we remove the locked so the player can continue to play
+        }, 1000);
+    };
+};
+
+//random position because of grid property
+function randomCardPosition(){
+    cards.forEach(card => {
+        let randomPos = Math.floor(Math.random() * 6);
+        card.style.order = randomPos;
+        console.log(randomPos)
+    });
+};
+randomCardPosition();

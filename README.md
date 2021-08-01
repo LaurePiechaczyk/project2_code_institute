@@ -70,8 +70,10 @@ to add a link here
 # Credits
 ## Inspiration credits
 - ### Theme Colors
+https://icolorpalette.com/imagepalette/color-palette-ideas-from-horizon-sky-shore-image-2
 - ### Website content
 ## Code credits
+udemy course 20 projets js
 ## General websites credits
 
 # Tests
