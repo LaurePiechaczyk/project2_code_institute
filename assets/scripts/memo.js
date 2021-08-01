@@ -87,7 +87,6 @@ let indexPrepositionInPairGame =  [] ; // arrays should look like something like
 let verbToFill = document.getElementsByClassName("front");
 let prepositionToFill = document.getElementsByClassName("back");
 
-
 //make and array with all the prepositions.
 function  makeArrayPrepositions() {
     for (let i = 0; i < verbsWithPrepositions.length ; i++) { 
@@ -101,7 +100,6 @@ function makeListUniquePreposition() {
    prepositionsListUnique = Array.from(new Set(arrayPrepositions)); 
 };
 makeListUniquePreposition()
-
 
 //randomly choose 3 different prepositions
 function choosePrepositionListUnique() { 
@@ -223,3 +221,10 @@ function randomCardPosition(){
     });
 };
 randomCardPosition();
+
+// restart the game
+
+document.getElementById("start-new-memo").addEventListener('click', startNewMemo)
+function startNewMemo(){
+    location.reload(true);
+}
