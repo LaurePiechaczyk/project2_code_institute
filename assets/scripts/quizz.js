@@ -84,6 +84,9 @@ let preposition3 ; // a preposition randomly chosen which is different from the 
 
 let choices = document.querySelectorAll('.choice');
 
+let score = 0;
+let questionCounter = 1;
+
 //get a question randomly (get the indexposition in verbsWithPrepositions)
 function getVerbIndex() {
     VerbIndex = Math.floor(Math.random() * verbsWithPrepositions.length);
@@ -154,6 +157,7 @@ letChoose()
 function responseToTheChoice(){
     if(this.getAttribute('data-attr') == "correct"){
         this.classList.add("color-correct");
+        incrementScore();
         setTimeout(nextQuestion, 2000); // go to the next question
     }
     else {
@@ -175,6 +179,13 @@ function feedback() {
 };
 
 function nextQuestion() {
+
+    incrementQuestionCounter() ; 
+    if (questionCounter == 9) { //stop the game when 8 verbs/questions has been answered
+        document.getElementById("end-game").style.visibility = "visible";
+        document.getElementById("final-score").innerHTML = score ;
+    }
+
     document.getElementById("wrong").style.visibility = "hidden"; // if it was wrong answer, this will hide the feedback
     for (let i = 0 ; i < 3 ; i++ ) { // to remove the colors added if correct or uncorrect
         document.getElementsByClassName("choice")[i].classList.remove("color-correct");
@@ -190,11 +201,16 @@ function nextQuestion() {
     randomCardPositionChoices(); 
 }
 
+// + 1 in score function. it displays the score in HTML
+function incrementScore() {
+    score+=1;
+    document.getElementById('score').innerText = score;
+};
 
-
-
-
-
-
+// + 1 in question counter. it displays the the question counter in HTML
+function incrementQuestionCounter() {
+    questionCounter+=1;
+    document.getElementById('question-number').innerText = questionCounter;
+};
 
 
