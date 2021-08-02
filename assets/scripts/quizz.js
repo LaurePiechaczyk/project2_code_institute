@@ -77,13 +77,11 @@ let prepositionsListUnique ; // array should look like something like ["auf", "a
 let preposition1 ; // should look like "auf". This preposition is the correct one
 let preposition2 ; // a preposition randomly chosen which is different from the preposition1
 let preposition3 ; // a preposition randomly chosen which is different from the preposition1 and the preposition2
-
 let choices = document.querySelectorAll('.choice');
-
 let score = 0;
 let questionCounter = 1;
-
 let usedVerb = []; // it is array with the the index of the verbs that have been used. It is to avoid using twice the same verb
+let verbsForFeedback = []; // array with the verbs that can be used for feedback
 
 //get a question randomly (get the indexposition in verbsWithPrepositions)
 function getVerbIndex() {
@@ -167,7 +165,6 @@ function blockChoose() {
 };
 
 function responseToTheChoice(){
-
     // block the answers so the player cannot continue to click
     blockChoose();
 
@@ -183,16 +180,49 @@ function responseToTheChoice(){
 };
 
 //feedback when wrong answer
+function getVerbsForFeedback() {
+    verbsForFeedback = [];// empty the array before filling it (because if there was already a wrong answer, it has data in it)
+    for (let i = 0; i < verbsWithPrepositions.length ; i++) {
+        if (verbsWithPrepositions[i].preposition == preposition1) {
+            if (i !== verbIndex) { // it is to avoid to have the verb used as question displayed in feedback
+            verbsForFeedback.push(i);
+            }; //close second if
+        }; // close first if
+    }; //close for
+    console.log(verbsForFeedback)
+};
+console.log(verbsForFeedback)
+
 function feedback() {
     document.getElementById("wrong").style.visibility = "visible";
     document.getElementById("preposition-feedback").innerHTML = preposition1 ;
-    document.getElementsByClassName("verb-feedback")[0].innerHTML = "verb1" ;
-    document.getElementsByClassName("verb-feedback")[1].innerHTML = "verb1" ;
-    document.getElementsByClassName("verb-feedback")[2].innerHTML = "verb1" ;
-    document.getElementsByClassName("verb-feedback")[3].innerHTML = "verb1" ;
+
+    getVerbsForFeedback();
+
+    let a = 0 // "a" is a value that will permit to not display all the time the same verbs for feedback. If the number of available verbs to display for feedback is 4 or under 4, a will stay = 0
+    a = 0; 
+    if(verbsForFeedback.length > 4) {
+     a = Math.floor(Math.random() * (verbsForFeedback.length - 4)); 
+    }  
+
+    for (let i = 0; i < 4 ; i++) {
+        document.getElementsByClassName("verb-feedback")[i].innerHTML = ""; // remove the verbs that could have been previouslly added in case of a previous uncorrect answer
+    }; // close for loop
+
+    if(verbsForFeedback.length > 5) {
+        for (let i = 0; i < 4 ; i++) {
+            document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + a]].verb; // adding "a" permits to not have always the same verbs displayed.
+            }; // close for loop
+    }; // close if 
+    if(verbsForFeedback.length < 5) {
+        for (let i = 0; i < verbsForFeedback.length ; i++) {
+        document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + a]].verb; // adding "a" permits to not have always the same verbs displayed.
+        }; // close for loop
+    } ; // close if 
 
     document.getElementById("next-question").addEventListener("click", nextQuestion);
 };
+
 
 function nextQuestion() {
 
@@ -225,7 +255,7 @@ function incrementScore() {
     document.getElementById('score').innerText = score;
 };
 
-// + 1 in question counter. it displays the the question counter in HTML
+// + 1 in question counter. it displays the question counter in HTML
 function incrementQuestionCounter() {
     questionCounter+=1;
     document.getElementById('question-number').innerText = questionCounter;
