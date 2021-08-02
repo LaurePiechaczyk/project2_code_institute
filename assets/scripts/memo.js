@@ -67,10 +67,6 @@ let verbsWithPrepositions = [
         preposition: "für",
     },
     {
-        verb: "aufpassen",
-        preposition: "auf",
-    },
-    {
         verb: "reden",
         preposition: "über",
     },

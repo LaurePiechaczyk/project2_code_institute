@@ -154,7 +154,18 @@ function letChoose() {
 };
 letChoose()
 
+//don t let the player choose (after one choice there is a time where we don t want to allow the player to choose again)
+function blockChoose() {
+    choices.forEach(choice => {
+        choice.removeEventListener('click', responseToTheChoice)
+        } ); 
+};
+
 function responseToTheChoice(){
+
+    // block the answers so the player cannot continue to click
+    blockChoose();
+
     if(this.getAttribute('data-attr') == "correct"){
         this.classList.add("color-correct");
         incrementScore();
@@ -199,6 +210,8 @@ function nextQuestion() {
     getPrepositions();
     displayPrepositions();
     randomCardPositionChoices(); 
+
+    letChoose(); // re allow the player to choose (it was blocked after the previous choice)
 }
 
 // + 1 in score function. it displays the score in HTML

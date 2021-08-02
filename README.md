@@ -15,6 +15,11 @@ To do this, I created a game to learn the german verbs with the prepositions.
 <summary>Open the Table of Contents here</summary>
 </details>
 
+To do:
+Bias with the distribution of the questions and cards memo
+if a verb is twice in the list?
+
+
 # About the project 
 In order to practice, develop and demonstrate my HTML, CSS and particurlarly js skills, I created the responsive website German verbs with Prepositions. German verbs with Prepositions is website with games to learn the German verbs with Prepositions
 I have chosen this theme because I am myself learning german and visual assotiotion to learn works well with me.
