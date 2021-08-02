@@ -65,17 +65,13 @@ let verbsWithPrepositions = [
         preposition: "für",
     },
     {
-        verb: "aufpassen",
-        preposition: "auf",
-    },
-    {
         verb: "reden",
         preposition: "über",
     },
 ];
 
 // variables 
-let VerbIndex ; // It is just a number. It is the index of the verb that will be used for the quizz as question
+let verbIndex ; // It is just a number. It is the index of the verb that will be used for the quizz as question
 let arrayPrepositions ; // array should look like something like ["auf", "auf", "an", "von", "mit", ....] it has the length of verbsWithPrepositions
 let prepositionsListUnique ; // array should look like something like ["auf", "an", "von", "mit", "für", "über"] each preposition appears only once
 let preposition1 ; // should look like "auf". This preposition is the correct one
@@ -87,15 +83,24 @@ let choices = document.querySelectorAll('.choice');
 let score = 0;
 let questionCounter = 1;
 
+let usedVerb = []; // it is array with the the index of the verbs that have been used. It is to avoid using twice the same verb
+
 //get a question randomly (get the indexposition in verbsWithPrepositions)
 function getVerbIndex() {
-    VerbIndex = Math.floor(Math.random() * verbsWithPrepositions.length);
+    verbIndex = Math.floor(Math.random() * verbsWithPrepositions.length); 
+
+    while( verbIndex == usedVerb[0] || verbIndex == usedVerb[1] || verbIndex == usedVerb[2] 
+        || verbIndex == usedVerb[3] || verbIndex == usedVerb[4] || verbIndex == usedVerb[5] 
+        || verbIndex == usedVerb[6] || verbIndex == usedVerb[7]) {   
+         verbIndex = Math.floor(Math.random() * verbsWithPrepositions.length);
+    }; 
+    usedVerb.push(verbIndex);// each time a question is used, the index arrives in this array
 }
-getVerbIndex()
+getVerbIndex(); 
 
 // Display the verb
 function displayVerb() {
-    document.getElementById("question").innerHTML = verbsWithPrepositions[VerbIndex].verb;
+    document.getElementById("question").innerHTML = verbsWithPrepositions[verbIndex].verb;
 } ;
 displayVerb()
 
@@ -115,7 +120,7 @@ function getPrepositions() {
     prepositionsListUnique = Array.from(new Set(arrayPrepositions));
 
     // Get the good preposition + two other prepositions
-    preposition1 = verbsWithPrepositions[VerbIndex].preposition;
+    preposition1 = verbsWithPrepositions[verbIndex].preposition;
 
     preposition2 = prepositionsListUnique[Math.floor(Math.random() * prepositionsListUnique.length)] ;  
     while(preposition1 == preposition2) {   
