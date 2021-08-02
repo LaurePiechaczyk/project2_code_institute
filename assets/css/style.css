@@ -89,34 +89,6 @@ body {
   transform: rotateY(180deg)
 }
 
-/* For phones */
-@media screen and (max-width: 750px) { 
-#grid-memo {
-    grid-template: repeat(3, 150px) / repeat(2, 150px);
-}
-
-h1, h2, p {
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-
-h1 {
-  font-size: 140%;
-  }
-  
-h2 {
-font-size: 110%;
-}
-
-#memory-container {
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-} /* Close  @media screen and (max-width: 750px) */
-
-
  /*  #######   Quizz Part #######  */
  #quizz-container {
   height: 450px;
@@ -251,14 +223,122 @@ font-size: 110%;
   background-color: darkred;
 }
 
-/*   @media screens */
-@media screen and (max-width: 600px) { 
-  #quizz-container {
-    width: 500px;
-  }
-}/* Close  @media screen and (max-width: 600px) */
 
-@media screen and (max-width: 500px) { 
+
+
+
+/* responsivness ###################################################### */
+
+
+@media screen and (max-width: 650px) { 
+  h1 {
+    color: red;
+  }
+  /*  #######   Memo Part #######  */
+#grid-memo {
+    grid-template: repeat(2, 170px) / repeat(3, 170px);
+}
+
+   /*  #######   Quizz Part #######  */
+#quizz-container {
+    width: 500px;
+}
+
+#wrong {
+  margin-top: -230px;
+  margin-left: -50px;
+  width: 500px;
+}
+
+#end-game {
+  margin-left: -50px;
+  width: 500px;
+}
+  } /* Close  @media screen  */
+
+
+
+
+
+@media screen and (max-width: 550px) { 
+  h1 {
+    color: yellow;
+  }
+
+h1, h2, p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+  
+h1 {
+  font-size: 160%;
+}
+  
+h2 {
+  font-size: 130%;
+}
+
+.button {
+  margin-bottom: -10px;
+}
+
+
+   /*#######   Memo Part #######  */
+#grid-memo {
+    grid-template: repeat(3, 150px) / repeat(2, 150px);
+}
+
+
+/*  #######   Quizz Part ####### */
+#quizz-container h2 {
+
+  font-size: 180%;
+}
+
+#quizz-container p {
+  font-size: 130%;
+}
+
+
+#quizz-container {
+  width: 100%;
+}
+
+#question-answer-container {
+  width: 100%;
+  margin-left: -10px;
+  position: relative;
+}
+
+#grid-quizz {
+  display: inline-grid;
+  grid-template: repeat(3, 70px) / repeat(1, 270px);
+}
+
+#wrong {
+  width: 100%;
+  margin-left: 10px;
+}
+
+#grid-feed-back {
+  grid-template: repeat(2, 100px) / repeat(2, 150px);
+}
+
+#end-game {
+  width: 100%;
+  margin-left: 10px;
+  margin-top: -360px;
+}
+
+
+}/* Close  @media screen and (max-width: 500px) */
+
+
+/*
+h1, h2, p {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
 
   h1 {
     font-size: 160%;
@@ -268,6 +348,14 @@ font-size: 110%;
   font-size: 130%;
   }
 
+  /*  #######   Memo Part #######  
+
+  #grid-memo {
+    grid-template: repeat(3, 150px) / repeat(2, 150px);
+}
+
+
+   /*  #######   Quizz Part ####### 
   #quizz-container {
     width: 100%;
   }
