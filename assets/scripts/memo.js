@@ -223,7 +223,6 @@ function randomCardPosition(){
 randomCardPosition();
 
 // restart the game
-
 document.getElementById("start-new-memo").addEventListener('click', startNewMemo)
 function startNewMemo(){
     location.reload(true);

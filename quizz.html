@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<h1>German verbs with preposition</h1>
+<h2>The Quizz</h2>
+<div class="button"><a href="index.html">Go back to Memo Game</a></div>
+
+<div id= "quizz-container">
+    <!-- question counter and score  -->
+    <div id="question-counter">
+        <p>Question Counter</p>
+        <p><span id="question-number">1</span> /8</p>
+    </div>
+    <div id="score-counter">
+        <p>Score</p>
+        <p id="score">0</p>
+    </div>
+
+    <div id="question-answer-container">
+        <!-- question   -->
+        <h2> Verb: <span id="question">this is the verb</span></h2>
+
+        <!-- Choices   -->
+        <div id="grid-quizz"><!-- to use the fonctionnality of changing order   -->
+
+            <div class="choice-container choice" data-attr="correct"><!-- The correct choice will always be here. To display in different places, order from grid fonctionnality will be used  -->
+                <p class="choice-prefix"></p>
+                <p class="choice-text">Choice A</p>
+            </div>
+            <div class="choice-container choice" data-attr="uncorrect">
+                <p class="choice-prefix"></p>
+                <p class="choice-text">Choice B</p>
+            </div>
+            <div class="choice-container choice" data-attr="uncorrect">
+                <p class="choice-prefix"></p>
+                <p class="choice-text">Choice C</p>
+            </div>
+
+        </div>
+
+        <!-- Feedback part. When an answer is wrong, feed back will be displayed   -->
+        <div id="wrong">
+            <p>The correct Preposition is <span id="preposition-feedback">Preposition</span></p>
+            <p>Other verbs with this preposition are:</p>
+            <div id="grid-feed-back">
+                <div>
+                <p class="verb-feedback">Verb1</p>
+                </div>
+                <div >
+                <p class="verb-feedback">Verb2</p>
+                </div>
+                <div >
+                <p class="verb-feedback">Verb3</p>
+                </div>
+                <div >
+                <p class="verb-feedback">Verb4</p>
+                </div>
+            </div>
+
+            <p class="button" id="next-question">Go to the next question</p>
+        </div>
+
+        <!-- after 8 questions, the score will be displayed  -->
+        <div id="end-game">
+            <p>You have obtained <span id="final-score">score</span> correct answers out of 8 questions</p> 
+            <div class="button"><a href="quizz.html">Do another Quizz?</a></div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
