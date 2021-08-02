@@ -94,6 +94,7 @@ getVerbIndex()
 function displayVerb() {
     document.getElementById("question").innerHTML = verbsWithPrepositions[VerbIndex].verb;
 } ;
+displayVerb()
 
 //#######  Get the good preposition + two other prepositions #######
 //make and array with all the prepositions. 
@@ -141,5 +142,59 @@ function randomCardPositionChoices(){
     })
 };
 randomCardPositionChoices();
-console.log(choices)
+
+//let the player choose a choice
+function letChoose() {
+    choices.forEach(choice => {
+        choice.addEventListener('click', responseToTheChoice)
+        } );
+};
+letChoose()
+
+function responseToTheChoice(){
+    if(this.getAttribute('data-attr') == "correct"){
+        this.classList.add("color-correct");
+        setTimeout(nextQuestion, 2000); // go to the next question
+    }
+    else {
+        this.classList.add("color-uncorrect"); 
+        setTimeout(feedback, 1000); // feedback will be displayed
+    };
+};
+
+//feedback when wrong answer
+function feedback() {
+    document.getElementById("wrong").style.visibility = "visible";
+    document.getElementById("preposition-feedback").innerHTML = preposition1 ;
+    document.getElementsByClassName("verb-feedback")[0].innerHTML = "verb1" ;
+    document.getElementsByClassName("verb-feedback")[1].innerHTML = "verb1" ;
+    document.getElementsByClassName("verb-feedback")[2].innerHTML = "verb1" ;
+    document.getElementsByClassName("verb-feedback")[3].innerHTML = "verb1" ;
+
+    document.getElementById("next-question").addEventListener("click", nextQuestion);
+};
+
+function nextQuestion() {
+    document.getElementById("wrong").style.visibility = "hidden"; // if it was wrong answer, this will hide the feedback
+    for (let i = 0 ; i < 3 ; i++ ) { // to remove the colors added if correct or uncorrect
+        document.getElementsByClassName("choice")[i].classList.remove("color-correct");
+        document.getElementsByClassName("choice")[i].classList.remove("color-uncorrect");
+        }; 
+
+    // get a new verb, prepositions ... and display for the next question 
+    getVerbIndex();
+    displayVerb();
+    makeArrayPrepositions(); 
+    getPrepositions();
+    displayPrepositions();
+    randomCardPositionChoices(); 
+}
+
+
+
+
+
+
+
+
 

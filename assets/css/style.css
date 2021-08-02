@@ -244,8 +244,21 @@ font-size: 110%;
   padding-top: 100px;
 }
 
+.color-correct {
+  background-color:darkcyan ;
+}
+.color-uncorrect {
+  background-color: darkred;
+}
 
-@media screen and (max-width: 750px) { 
+/*   @media screens */
+@media screen and (max-width: 600px) { 
+  #quizz-container {
+    width: 500px;
+  }
+}/* Close  @media screen and (max-width: 600px) */
+
+@media screen and (max-width: 500px) { 
 
   h1 {
     font-size: 160%;
@@ -284,4 +297,4 @@ font-size: 110%;
 }
 
 
-} /* Close  @media screen and (max-width: 750px) */
+} /* Close  @media screen and (max-width: 500px) */
