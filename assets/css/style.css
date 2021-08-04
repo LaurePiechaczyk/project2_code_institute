@@ -158,7 +158,6 @@ body {
 
 #wrong {
   visibility: hidden;
-  /*visibility: hidden;*/
   margin-top: -230px;
   margin-left: -100px;
   width: 600px;
@@ -198,7 +197,6 @@ body {
 
 #end-game {
   visibility: hidden;
-  /*visibility: hidden;*/
   margin-top: -390px;
   margin-left: -100px;
   width: 600px;
@@ -223,7 +221,6 @@ body {
   background-color: darkred;
 }
 
-
  /*  #######   Rules Part #######  */
 #rules-container {
   width: 80%;
@@ -236,10 +233,8 @@ body {
 
 /* responsivness ###################################################### */
 @media screen and (max-width: 650px) { 
-  h1 {
-    color: red;
-  }
-  /*  #######   Memo Part #######  */
+
+/*  #######   Memo Part #######  */
 #grid-memo {
     grid-template: repeat(2, 170px) / repeat(3, 170px);
 }
@@ -262,13 +257,7 @@ body {
 
 } /* Close  @media screen  */
 
-
-
 @media screen and (max-width: 550px) { 
-  h1 {
-    color: yellow;
-  }
-
 h1, h2, p {
   margin-bottom: 5px;
   margin-top: 5px;
@@ -286,12 +275,10 @@ h2 {
   margin-bottom: -10px;
 }
 
-
    /*#######   Memo Part #######  */
 #grid-memo {
     grid-template: repeat(3, 150px) / repeat(2, 150px);
 }
-
 
 /*  #######   Quizz Part ####### */
 #quizz-container h2 {
@@ -301,7 +288,6 @@ h2 {
 #quizz-container p {
   font-size: 130%;
 }
-
 
 #quizz-container {
   width: 100%;
