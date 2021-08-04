@@ -65,7 +65,15 @@ function getIndexPreposition() {
                 indexPrepositionGame[2].push(i);
             };
     }; //end for loop
- }; //end function
+
+    // in case there is no pair available in the list, a new game will start
+    if(indexPrepositionGame[0].length == 1 || indexPrepositionGame[1].length == 1 || indexPrepositionGame[2].length == 1) {
+        window.location.reload();
+        return;
+    };
+
+    chooseTwoPrepositions()
+}; //end function
 getIndexPreposition();
 
 // Now we need only pairs. 
@@ -80,7 +88,7 @@ function chooseTwoPrepositions(){
             indexPrepositionInPairGame.push(indexPrepositionGame[i][secondPrepposition]);
     }; //close for loop
 }; // close function
-chooseTwoPrepositions();
+//chooseTwoPrepositions();
 
 // displaying verbs and preopsitions in the HTML. Note: random position using grid property changing order ramdomly.
 function displayVerbsAndPrepositions() {
@@ -144,7 +152,6 @@ function randomCardPosition(){
     cards.forEach(card => {
         let randomPos = Math.floor(Math.random() * 6);
         card.style.order = randomPos;
-        console.log(randomPos)
     });
 };
 randomCardPosition();
