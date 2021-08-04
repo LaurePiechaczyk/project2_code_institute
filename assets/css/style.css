@@ -295,7 +295,6 @@ h2 {
 
 /*  #######   Quizz Part ####### */
 #quizz-container h2 {
-
   font-size: 180%;
 }
 
@@ -338,6 +337,14 @@ h2 {
  #rules-container {
   width: 100%;
   margin-top: 0px;
+  margin-left: -5px;
+}
+
+#rules-container .button {
+  margin-bottom: 0px;
+}
+#rules-container h1 {
+  margin-bottom: 10px;
 }
 
 }/* Close  @media screen and (max-width: 500px) */

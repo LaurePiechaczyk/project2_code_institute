@@ -2,7 +2,7 @@
 
 python3 -m http.server
 
-[View the live project here.]()
+[View the live project here.](https://laurepiechaczyk.github.io/project2_code_institute/)
 
 German verbs with Prepositions is a website built as part of a project for the [code institute](https://codeinstitute.net/) (training to become a web developer) to develop and show my skills in javascript. 
 
