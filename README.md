@@ -77,6 +77,8 @@ to add a link here
 - ### Theme Colors
 https://icolorpalette.com/imagepalette/color-palette-ideas-from-horizon-sky-shore-image-2
 - ### Website content
+https://grammar.collinsdictionary.com/german-easy-learning/verbs-followed-by-prepositions
+https://ielanguages.com/german-verbs-prepositions.html
 ## Code credits
 udemy course 20 projets js
 ## General websites credits

@@ -68,7 +68,7 @@ function getIndexPreposition() {
 
     // in case there is no pair available in the list, a new game will start
     if(indexPrepositionGame[0].length == 1 || indexPrepositionGame[1].length == 1 || indexPrepositionGame[2].length == 1) {
-        window.location.reload();
+        startNewMemo();
         return;
     };
 
