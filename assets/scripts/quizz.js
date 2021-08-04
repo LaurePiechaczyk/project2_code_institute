@@ -1,7 +1,6 @@
 // List of verb with the proposition in an object. Same list as for memo game
 import {verbsWithPrepositions} from './list.js';
 
-
 // variables 
 let verbIndex ; // It is just a number. It is the index of the verb that will be used for the quizz as question
 let arrayPrepositions ; // array should look like something like ["auf", "auf", "an", "von", "mit", ....] it has the length of verbsWithPrepositions
