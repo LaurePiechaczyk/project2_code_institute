@@ -1,74 +1,5 @@
 // List of verb with the proposition in an object. Same list as for memo game
-let verbsWithPrepositions = [
-    {
-        verb: "achten",
-        preposition: "auf",
-    },
-    {
-        verb: "warten",
-        preposition: "auf",
-    },
-    {
-        verb: "sich erinnern",
-        preposition: "an",
-    },
-    {
-        verb: "träumen",
-        preposition: "von",
-    },
-    {
-        verb: "beginnen",
-        preposition: "mit",
-    },
-    {
-        verb: "danken",
-        preposition: "für",
-    },
-    {
-        verb: "denken",
-        preposition: "an",
-    },
-    {
-        verb: "sich interessieren",
-        preposition: "für",
-    },
-    {
-        verb: "sich konzentrieren",
-        preposition: "auf",
-    },
-    {
-        verb: "lachen",
-        preposition: "über",
-    },
-    {
-        verb: "sich vorbereiten",
-        preposition: "auf",
-    },
-    {
-        verb: "aufpassen",
-        preposition: "auf",
-    },
-    {
-        verb: "erzählen ",
-        preposition: "von",
-    },
-    {
-        verb: "sich treffen",
-        preposition: "mit",
-    },
-    {
-        verb: "teilnehmen",
-        preposition: "an",
-    },
-    {
-        verb: "sich schämen",
-        preposition: "für",
-    },
-    {
-        verb: "reden",
-        preposition: "über",
-    },
-];
+import {verbsWithPrepositions} from './list.js';
 
 // variables 
 let verbIndex ; // It is just a number. It is the index of the verb that will be used for the quizz as question
@@ -77,7 +8,7 @@ let prepositionsListUnique ; // array should look like something like ["auf", "a
 let preposition1 ; // should look like "auf". This preposition is the correct one
 let preposition2 ; // a preposition randomly chosen which is different from the preposition1
 let preposition3 ; // a preposition randomly chosen which is different from the preposition1 and the preposition2
-let choices = document.querySelectorAll('.choice');
+const choices = document.querySelectorAll('.choice');
 let score = 0;
 let questionCounter = 1;
 let usedVerb = []; // it is array with the the index of the verbs that have been used. It is to avoid using twice the same verb
@@ -222,7 +153,6 @@ function feedback() {
 
     document.getElementById("next-question").addEventListener("click", nextQuestion);
 };
-
 
 function nextQuestion() {
 

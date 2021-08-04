@@ -1,76 +1,7 @@
 // ########## PART1 choose prepositions and verbs from a list and displaying it in the HTML ###########
 
 // List of verb with the proposition in an object
-let verbsWithPrepositions = [
-    {
-        verb: "achten",
-        preposition: "auf",
-    },
-    {
-        verb: "warten",
-        preposition: "auf",
-    },
-    {
-        verb: "sich erinnern",
-        preposition: "an",
-    },
-    {
-        verb: "träumen",
-        preposition: "von",
-    },
-    {
-        verb: "beginnen",
-        preposition: "mit",
-    },
-    {
-        verb: "danken",
-        preposition: "für",
-    },
-    {
-        verb: "denken",
-        preposition: "an",
-    },
-    {
-        verb: "sich interessieren",
-        preposition: "für",
-    },
-    {
-        verb: "sich konzentrieren",
-        preposition: "auf",
-    },
-    {
-        verb: "lachen",
-        preposition: "über",
-    },
-    {
-        verb: "sich vorbereiten",
-        preposition: "auf",
-    },
-    {
-        verb: "aufpassen",
-        preposition: "auf",
-    },
-    {
-        verb: "erzählen ",
-        preposition: "von",
-    },
-    {
-        verb: "sich treffen",
-        preposition: "mit",
-    },
-    {
-        verb: "teilnehmen",
-        preposition: "an",
-    },
-    {
-        verb: "sich schämen",
-        preposition: "für",
-    },
-    {
-        verb: "reden",
-        preposition: "über",
-    },
-];
+import {verbsWithPrepositions} from './list.js';
 
 // variables
 let arrayPrepositions = []; // array should look like something like ["auf", "auf", "an", "von", "mit", ....] it has the length of verbsWithPrepositions
@@ -80,8 +11,8 @@ let gamePrepositions = [];  // array should look like something like [5, 3, 4]; 
 let indexPrepositionGame =  [ [] , [] , [] ] ; // arrays should look like something like [Array(5), Array(4), Array(6)]; The first array (i.e Array(5)) contains the index of verb with the first gamePreposition (the index refers to verbsWithPrepositions)
 let indexPrepositionInPairGame =  [] ; // arrays should look like something like  [11, 8, 4, 13, 2, 6]. Here 11 and 8 refers to Position in verbsWithPrepositions where verbs have the same preposition. 4 and 13 to two other verbs with same preposition and 2 and 6  to two other verbs with same preposition
 
-let verbToFill = document.getElementsByClassName("front");
-let prepositionToFill = document.getElementsByClassName("back");
+const verbToFill = document.getElementsByClassName("front");
+const prepositionToFill = document.getElementsByClassName("back");
 
 //make and array with all the prepositions.
 function  makeArrayPrepositions() {
@@ -161,7 +92,7 @@ function displayVerbsAndPrepositions() {
 displayVerbsAndPrepositions();
 
 // ########## PART2  Make the game working ###########
-let cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.card');
 let cardIsReturned = false;
 let firstCard, secondCard;
 let locked = false;
@@ -221,5 +152,5 @@ randomCardPosition();
 // restart the game
 document.getElementById("start-new-memo").addEventListener('click', startNewMemo)
 function startNewMemo(){
-    location.reload(true);
-}
+    window.location.reload();
+};
