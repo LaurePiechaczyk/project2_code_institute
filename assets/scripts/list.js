@@ -56,12 +56,12 @@ export let verbsWithPrepositions = [
         preposition: "mit",
     },
     {
-        verb: "teilnehmen",
-        preposition: "an",
-    },
-    {
         verb: "sich schämen",
         preposition: "für",
+    },
+    {
+        verb: "teilnehmen",
+        preposition: "an",
     },
     {
         verb: "reden",
