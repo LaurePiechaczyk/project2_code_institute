@@ -18,6 +18,7 @@ To do this, I created a game to learn the german verbs with the prepositions.
 To do:
 Bias with the distribution of the questions and cards memo
 if a verb is twice in the list?
+http://deutsch.ie/german-grammar/german-exercises/german-verbs/game-verbs-with-prepositions/
 
 
 # About the project 

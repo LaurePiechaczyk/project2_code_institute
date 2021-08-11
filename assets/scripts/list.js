@@ -1,5 +1,4 @@
-export let verbsWithPrepositions = [
-    {
+export let verbsWithPrepositions = [{
         verb: "sich amüsieren",
         preposition: "über",
     },
@@ -31,7 +30,7 @@ export let verbsWithPrepositions = [
         verb: "anfangen",
         preposition: "mit",
     },
-    {  
+    {
         verb: "sich gewöhnen",
         preposition: "an",
     },
@@ -44,7 +43,7 @@ export let verbsWithPrepositions = [
         preposition: "über",
     },
     {
-        verb: " sich verlassen",
+        verb: "sich verlassen",
         preposition: "auf",
     },
     {
