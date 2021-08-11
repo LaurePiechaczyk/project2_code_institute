@@ -71,17 +71,40 @@ People learning German and particurlarly people wanted to improve their knowledg
 
 # Features 
 ## Composition of the website
+The site is composed of 3 pages. The landing page is a game called Memo game whic contains links to another page whixh is a quiz and a last page which contains the rules and explanation about the website.
+
+- ### Memo Game
+The German verb with preposition Memo Game is inspired by memory card games where the player has to turn over cards to find pairs of identical pictures. Instead of finding pairs of pictures, the player of the German Memo Game has to find pairs of verbs with the same preposition.
+
+<details>
+<summary>Picture of the Memo Game here</summary>
+<h3 align="center"><img src="assets/images/memo-game.png"></h3>
+</details>
+
+- ### Quiz
+The quiz ask to find the correct preposition associated to the verb. It has the particularity that in case of a wrong answer, the player will receive a feedback with the right answer (the right preposition) and also a list of verbs that have the same preposition. It contains 8 question and the number of correct answers is shown on the top left. At the end of the quiz, the player receive a feedback on the number of correct answers.
+<details>
+<summary>Picture of the Quiz here</summary>
+<h3 align="center"><img src="assets/images/quiz.png"></h3>
+</details>
+
+- ### Background and rules
+This page explain the aim of the games and rules
+<details>
+<summary>Picture of the Background and rules here</summary>
+<h3 align="center"><img src="assets/images/rules.png"></h3>
+</details>
+
 ## Responsiveness
-## Animations
+The website is designed to be suitable for all devices. The grid of the Memo game is in the longuer for the phone users. 
 
 # Technologies used
 ## Languages used
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)  
 -   [js](https://en.wikipedia.org/wiki/JavaScript)  
-## Frameworks and Programs used
-- [Google Fonts](https://fonts.google.com/) | used to  import the 'Roboto' font
 
+## Frameworks and Programs used
 - [Git](https://git-scm.com/) | used as version control system
 
 - [Gitpod](https://gitpod.io/workspaces) | used to code, commit to git and push the codes to github

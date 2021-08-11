@@ -131,9 +131,11 @@ function feedback() {
 
     getVerbsForFeedback();
 
-    let shiftValue = 0; // "shiftValue" is a value that will permit to not display all the time the same verbs for feedback. If the number of available verbs to display for feedback is 4 or under 4, shifValue will stay = 0
-    let numVerbFeedbackDisplayed = 4
-    
+    let shiftValue = 0; 
+    shiftValue = 0;// "shiftValue" is a value that will permit to not display all the time the same verbs for feedback. If the number of available verbs to display for feedback is 4 or under 4, shifValue will stay = 0
+    let numVerbFeedbackDisplayed = 4;
+    numVerbFeedbackDisplayed = 4;
+
     if (verbsForFeedback.length > numVerbFeedbackDisplayed) {
         shiftValue = Math.floor(Math.random() * (verbsForFeedback.length - numVerbFeedbackDisplayed));
     }
@@ -142,16 +144,16 @@ function feedback() {
         document.getElementsByClassName("verb-feedback")[i].innerHTML = ""; // remove the verbs that could have been previouslly added in case of a previous uncorrect answer
     } // close for loop
 
-    if (verbsForFeedback.length > (numVerbFeedbackDisplayed + 1)) {
-        for (let i = 0; i < numVerbFeedbackDisplayed; i++) {
-            document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + shiftValue]].verb; // adding "shiftValue" permits to not have always the same verbs displayed.
-        } // close for loop
-    } // close if 
-    if (verbsForFeedback.length < (numVerbFeedbackDisplayed + 1)) {
-        for (let i = 0; i < verbsForFeedback.length; i++) {
+    if(verbsForFeedback.length > numVerbFeedbackDisplayed) {
+        for (let i = 0; i < numVerbFeedbackDisplayed ; i++) {
             document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + shiftValue]].verb; // adding "a" permits to not have always the same verbs displayed.
-        } // close for loop
-    } // close if 
+            }; // close for loop
+    }; // close if 
+    if(verbsForFeedback.length <= numVerbFeedbackDisplayed) {
+        for (let i = 0; i < verbsForFeedback.length ; i++) {
+        document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + shiftValue]].verb; // adding "a" permits to not have always the same verbs displayed.
+        }; // close for loop
+    } ; // close if 
 
     document.getElementById("next-question").addEventListener("click", nextQuestion);
 }
