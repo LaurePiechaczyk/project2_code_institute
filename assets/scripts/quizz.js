@@ -147,7 +147,7 @@ function feedback() {
             document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + shiftValue]].verb; // adding "shiftValue" permits to not have always the same verbs displayed.
             }; // close for loop
     }; // close if 
-    if(verbsForFeedback.length <= numVerbFeedbackDisplayed) { // when there are not 4 verbs for feedback, only the available verbs will beused
+    if(verbsForFeedback.length <= numVerbFeedbackDisplayed) { // when there are not 4 verbs for feedback, only the available verbs will be used
         for (let i = 0; i < verbsForFeedback.length ; i++) {
         document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i]].verb;  // no schift value here because the available verbs are not long enough to be shifted
         }; // close for loop
