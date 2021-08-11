@@ -5,8 +5,7 @@
 German verbs with Prepositions is a website built as part of a project for the [code institute](https://codeinstitute.net/) (training to become a web developer) to develop and show my skills in javascript. 
 
 To do this, I created a game to learn German verbs with prepositions.
-
-<h3 align="center"><img src="assets/images/main-picture.png"></h3>
+<h3 align="center"><img src=""></h3>
 
 # Table of content
 <details>
@@ -30,7 +29,6 @@ To learn a language, repetition is the key and, in my opinion, boredom is the bi
 It is thus important to find ways to avoid boredom and games can be very useful.
 
 
-Another idea to develop this website is to learn by matching verbs using the same preposition.
 Another idea to develop this website is to learn by matching verbs using the same preposition.
 
 That's what this site is all about: Fun + matching verbs with same preposition
@@ -82,7 +80,7 @@ The German Verbs with Prepositions Memo Game is inspired by memory card games wh
 </details>
 
 - ### Quiz
-The quiz asks to find the right preposition associated with the verb. It has the particularity that in case of wrong answer, the player will receive a feedback with the right answer (the right preposition) and also a list of verbs that have the same preposition. It contains 8 questions and the number of correct answers is indicated in the upper left corner. At the end of the quiz, the player receives feedback on the number of correct answers.
+The quiz asks to find the right preposition associated with the verb. It has the particularity that in case of wrong answer, the player will receive a feedback with the right answer (the right preposition) and also a list of verbs that have the same preposition. It contains 8 questions and the number of correct answers is indicated in the upper right corner. At the end of the quiz, the player receives feedback on the number of correct answers.
 
 <details>
 <summary>Picture of the Quiz here</summary>
@@ -123,7 +121,14 @@ This page explains the purpose of the games and the rules.
 
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/) | used to inspect the elements, codes and to see the how the site look like on various phones and tablets
 
-- [DeepL](https://www.deepl.com/) |  used to translate words from French to English and to write the content of the website and the 'Read me' file
+- [DeepL](https://www.deepl.com/) | used to translate words from French to English and to write the content of the website and the 'Read me' file
+
+-  [Xbox Game Bar](https://www.microsoft.com/en-us/p/xbox-game-bar/9nzkpstsnw4p?activetab=pivot:overviewtab) | used to make the video to present the website in the read me file
+
+- [Crop-video](https://crop-video.com/) | used to crop the video to present the website in the read me file
+
+- [Ezgif](https://ezgif.com/optimize/ezgif-2-af1b3b441270.gif) |  used to transform the video into gif to present the website in the read me file
+
 
 
 # Tests
@@ -150,6 +155,8 @@ The website was tested on computers using the browsers:
 ## Test on devices
 [Chrome DevTools](https://developer.chrome.com/docs/devtools/) was used to see how the site looks like on various phones and tablets. Additionally, after deployment the website was tested on various phones: iphone11, iphone10, Samsung Galaxy A3.
 
+## Responsiveness
+<h3 align="center"><img src="assets/images/main-picture.png"></h3>
 
 # Deployment
 ## GitHub Pages
