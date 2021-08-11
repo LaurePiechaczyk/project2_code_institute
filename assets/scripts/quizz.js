@@ -24,9 +24,7 @@ let limitBiais = 10 // in order to limit the bias that the correct answer would 
 function getVerbIndex() {
     verbIndex = Math.floor(Math.random() * verbsWithPrepositions.length);
 
-    while (verbIndex == usedVerb[0] || verbIndex == usedVerb[1] || verbIndex == usedVerb[2] ||
-        verbIndex == usedVerb[3] || verbIndex == usedVerb[4] || verbIndex == usedVerb[5] ||
-        verbIndex == usedVerb[6] || verbIndex == usedVerb[7]) {
+    while (usedVerb.includes(verbIndex)) {
         verbIndex = Math.floor(Math.random() * verbsWithPrepositions.length);
     }
     usedVerb.push(verbIndex); // each time a question is used, the index arrives in this array
@@ -133,8 +131,7 @@ function feedback() {
 
     getVerbsForFeedback();
 
-    
-    let shiftValue = 0; // "shiftValue" is a value that will permit to not display all the time the same verbs for feedback. If the number of available verbs to display for feedback is 4 or under 4, a will stay = 0
+    let shiftValue = 0; // "shiftValue" is a value that will permit to not display all the time the same verbs for feedback. If the number of available verbs to display for feedback is 4 or under 4, shifValue will stay = 0
     let numVerbFeedbackDisplayed = 4
     
     if (verbsForFeedback.length > numVerbFeedbackDisplayed) {
