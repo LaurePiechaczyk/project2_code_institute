@@ -16,6 +16,10 @@ let questionCounter = 1;
 let usedVerb = []; // it is array with the the index of the verbs that have been used. It is to avoid using twice the same verb
 let verbsForFeedback = []; // array with the verbs that can be used for feedback
 
+let numChoices = 3
+let numQuestions = 8
+let limitBiais = 10 // in order to limit the bias that the correct answer would tend to be in the first position then second and less often in the third position
+
 //get a question randomly (get the indexposition in verbsWithPrepositions)
 function getVerbIndex() {
     verbIndex = Math.floor(Math.random() * verbsWithPrepositions.length);
@@ -76,7 +80,7 @@ displayPrepositions();
 // display randomly the answers by using the grid as done in the memo game
 function randomCardPositionChoices() {
     choices.forEach(choice => {
-        let randomPos = Math.floor(Math.random() * 3);
+        let randomPos = Math.floor(Math.random() * numChoices * limitBiais);
         choice.style.order = randomPos;
     });
 }
@@ -129,24 +133,26 @@ function feedback() {
 
     getVerbsForFeedback();
 
-    let a = 0; // "a" is a value that will permit to not display all the time the same verbs for feedback. If the number of available verbs to display for feedback is 4 or under 4, a will stay = 0
-    a = 0;
-    if (verbsForFeedback.length > 4) {
-        a = Math.floor(Math.random() * (verbsForFeedback.length - 4));
+    
+    let shiftValue = 0; // "shiftValue" is a value that will permit to not display all the time the same verbs for feedback. If the number of available verbs to display for feedback is 4 or under 4, a will stay = 0
+    let numVerbFeedbackDisplayed = 4
+    
+    if (verbsForFeedback.length > numVerbFeedbackDisplayed) {
+        shiftValue = Math.floor(Math.random() * (verbsForFeedback.length - numVerbFeedbackDisplayed));
     }
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < numVerbFeedbackDisplayed; i++) {
         document.getElementsByClassName("verb-feedback")[i].innerHTML = ""; // remove the verbs that could have been previouslly added in case of a previous uncorrect answer
     } // close for loop
 
-    if (verbsForFeedback.length > 5) {
-        for (let i = 0; i < 4; i++) {
-            document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + a]].verb; // adding "a" permits to not have always the same verbs displayed.
+    if (verbsForFeedback.length > (numVerbFeedbackDisplayed + 1)) {
+        for (let i = 0; i < numVerbFeedbackDisplayed; i++) {
+            document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + shiftValue]].verb; // adding "shiftValue" permits to not have always the same verbs displayed.
         } // close for loop
     } // close if 
-    if (verbsForFeedback.length < 5) {
+    if (verbsForFeedback.length < (numVerbFeedbackDisplayed + 1)) {
         for (let i = 0; i < verbsForFeedback.length; i++) {
-            document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + a]].verb; // adding "a" permits to not have always the same verbs displayed.
+            document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + shiftValue]].verb; // adding "a" permits to not have always the same verbs displayed.
         } // close for loop
     } // close if 
 
@@ -156,13 +162,13 @@ function feedback() {
 function nextQuestion() {
 
     incrementQuestionCounter();
-    if (questionCounter == 9) { //stop the game when 8 verbs/questions has been answered
+    if (questionCounter == (numQuestions + 1)) { //stop the game when 8 verbs/questions has been answered
         document.getElementById("end-game").style.visibility = "visible";
         document.getElementById("final-score").innerHTML = score;
     }
 
     document.getElementById("wrong").style.visibility = "hidden"; // if it was wrong answer, this will hide the feedback
-    for (let i = 0; i < 3; i++) { // to remove the colors added if correct or uncorrect
+    for (let i = 0; i < numChoices; i++) { // to remove the colors added if correct or uncorrect
         document.getElementsByClassName("choice")[i].classList.remove("color-correct");
         document.getElementsByClassName("choice")[i].classList.remove("color-uncorrect");
     }

@@ -10,15 +10,15 @@ let arrayPrepositions = []; // array should look like something like ["auf", "au
 let prepositionsListUnique = []; // array should look like something like ["auf", "an", "von", "mit", "für", "über"] each preposition appears only once
 let prepositionsListUniqueIndex = []; // array should look like something like [5, 3, 4]; The number are the index of the preposition from the array prepositionsListUnique
 let gamePrepositions = []; // array should look like something like [5, 3, 4]; ["für", "mit", "von"]. The game will use this prepositions (they are choosen randomly) so each new game will be new prepositions/oreder
-let indexPrepositionGame = [
-    [],
-    [],
-    []
-]; // arrays should look like something like [Array(5), Array(4), Array(6)]; The first array (i.e Array(5)) contains the index of verb with the first gamePreposition (the index refers to verbsWithPrepositions)
+let indexPrepositionGame = [ [],[],[] ]; // arrays should look like something like [Array(5), Array(4), Array(6)]; The first array (i.e Array(5)) contains the index of verb with the first gamePreposition (the index refers to verbsWithPrepositions)
 let indexPrepositionInPairGame = []; // arrays should look like something like  [11, 8, 4, 13, 2, 6]. Here 11 and 8 refers to Position in verbsWithPrepositions where verbs have the same preposition. 4 and 13 to two other verbs with same preposition and 2 and 6  to two other verbs with same preposition
 
 const verbToFill = document.getElementsByClassName("front");
 const prepositionToFill = document.getElementsByClassName("back");
+
+let numCards = 6 //it is also the number of verbs
+let numPairs = numCards / 2 
+let limitBiais = 10 // in order to limit the bias of pairs following each other
 
 //make and array with all the prepositions.
 function makeArrayPrepositions() {
@@ -84,7 +84,7 @@ getIndexPreposition();
 
 // Now we need only pairs. 
 function chooseTwoPrepositions() {
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < numPairs; i++) {
         let firstPrepposition = Math.floor(Math.random() * indexPrepositionGame[i].length);
         let secondPrepposition = Math.floor(Math.random() * indexPrepositionGame[i].length);
         while (firstPrepposition == secondPrepposition) { //get different second preposition
@@ -98,7 +98,7 @@ function chooseTwoPrepositions() {
 
 // displaying verbs and preopsitions in the HTML. Note: random position using grid property changing order ramdomly.
 function displayVerbsAndPrepositions() {
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < numCards; i++) {
         verbToFill[i].innerHTML = verbsWithPrepositions[indexPrepositionInPairGame[i]].verb;
         prepositionToFill[i].innerHTML = verbsWithPrepositions[indexPrepositionInPairGame[i]].preposition;
     }
@@ -155,7 +155,7 @@ function pair() {
 //random position because of grid property
 function randomCardPosition() {
     cards.forEach(card => {
-        let randomPos = Math.floor(Math.random() * 6);
+        let randomPos = Math.floor(Math.random() * numCards * limitBiais ); //
         card.style.order = randomPos;
     });
 }
