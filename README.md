@@ -1,42 +1,73 @@
 <h1 align="center"> Project 2 for Code Institute formation | German verbs with Prepositions - HTML & CSS & js</h1>
 
-python3 -m http.server
-
 [View the live project here.](https://laurepiechaczyk.github.io/project2_code_institute/)
 
 German verbs with Prepositions is a website built as part of a project for the [code institute](https://codeinstitute.net/) (training to become a web developer) to develop and show my skills in javascript. 
 
 To do this, I created a game to learn the german verbs with the prepositions.
 
-<h3 align="center"><img src=""></h3>
+<h3 align="center"><img src="assets/images/main-picture.png"></h3>
 
 # Table of content
 <details>
 <summary>Open the Table of Contents here</summary>
 </details>
 
-To do:
-Bias with the distribution of the questions and cards memo
-if a verb is twice in the list?
-http://deutsch.ie/german-grammar/german-exercises/german-verbs/game-verbs-with-prepositions/
-
 
 # About the project 
-In order to practice, develop and demonstrate my HTML, CSS and particurlarly js skills, I created the responsive website German verbs with Prepositions. German verbs with Prepositions is website with games to learn the German verbs with Prepositions
-I have chosen this theme because I am myself learning german and visual assotiotion to learn works well with me.
+In order to practice, develop and demonstrate my HTML, CSS and particurlarly js skills, I created the responsive website German verbs with Prepositions. German verbs with Prepositions is a website with a game and a quizz to learn the German verbs with Prepositions
+I have chosen this theme because I am myself learning german.
+
+## Background to understand the usefullness of the game
+As in English, some German verbs are followed by prepositions to give a certain meaning. These are called "verbs with prepositions". For example, "to wait for" would be "warten auf" in German.
+
+It leads to the question: 
+How can a person learning German learn which preposition goes with which verb?
+
+## Idea behind the website to help learning german
+To learn a language, repetition is the key and, in my opinion, boredom is the biggest obstacle.
+
+It is thus important to find ways to avoid boredom and games can be very useful.
+
+
+Another idea behing this website is to learn by matching verbs using the same preposition.
+Some verbs use the same preposition. For example, the verbs "warten" and "achten" use the preposition "auf".
+
+That's what this site is all about: Fun + matching verbs with same preposition
 
 # Target audience
+People learning German and particurlarly people wanted to improve their knowledge about German verbs with preposition. 
 
 # User Experience
-## User stories
-## Visitor Goals
-## Main design choices
-- ### Theme Colors
-- ### Background
-- ### Fonts
-- ### Interactivity, animations 
+- ### Visitor Goals
+  - As a First Time Visitor, I want to easily understand the main purpose of the site.
+  - As a First Time Visitor, I want to start playing directly.
+  - As a First Time Visitor, I want to learn and get motivation.
+  - As a First Time Visitor, I want to be able to easily navigate throughout the sitet.
+  - As a First Time Visitor, I want to access the site across a range of devices.
+
 ## Wireframes
-to add a link here
+<details>
+<summary>Memo game for computer</summary>
+<h3 align="center"><img src="assets/images/wireframe-memo-bigscreen.png"></h3>
+</details>
+<details>
+<summary>Memo game for phone</summary>
+<h3 align="center"><img src="assets/images/wireframe-memo-phone.png"></h3>
+</details>
+<details>
+<summary>Quiz</summary>
+<h3 align="center"><img src="assets/images/wireframe-quiz.png"></h3>
+</details>
+<details>
+<summary>Quiz feedback</summary>
+<h3 align="center"><img src="assets/images/wireframe-quiz-feedback.png"></h3>
+</details>
+<details>
+<summary>Rules</summary>
+<h3 align="center"><img src="assets/images/wireframe-rules.png"></h3>
+</details>
+
 
 # Features 
 ## Composition of the website
@@ -80,6 +111,8 @@ https://icolorpalette.com/imagepalette/color-palette-ideas-from-horizon-sky-shor
 - ### Website content
 https://grammar.collinsdictionary.com/german-easy-learning/verbs-followed-by-prepositions
 https://ielanguages.com/german-verbs-prepositions.html
+http://deutsch.ie/german-grammar/german-exercises/german-verbs/game-verbs-with-prepositions/
+
 ## Code credits
 udemy course 20 projets js
 ## General websites credits

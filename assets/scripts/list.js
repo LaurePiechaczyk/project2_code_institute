@@ -1,4 +1,5 @@
-export let verbsWithPrepositions = [{
+export let verbsWithPrepositions = [
+    {
         verb: "sich amüsieren",
         preposition: "über",
     },
