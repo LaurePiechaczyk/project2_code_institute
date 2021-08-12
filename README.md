@@ -17,7 +17,6 @@ To do this, I created a game to learn German verbs with prepositions.
 
 - [Idea behind the website to help learn German](#idea-behind-the-website-to-help-learn-german)
 
-
 [Target audience](#target-audience)  
 
 [User Experience](#user-experience)
@@ -28,7 +27,8 @@ To do this, I created a game to learn German verbs with prepositions.
 - [Composition of the website](#composition-of-the-website)
 - [Memo Game](#memo-game)
 - [Quiz](#quiz)
-[Background and rules](#background-and-rules)
+- [Background and rules](#background-and-rules)
+- [Future Features](future-feature)
 
 [Technologies used](#technologies-used)
 - [Languages used](#languages-used)
@@ -53,9 +53,7 @@ To do this, I created a game to learn German verbs with prepositions.
 
 [Acknowledgments](#acknowledgments)
 
-
 </details>
-
 
 # About the project 
 In order to practice, develop and demonstrate my HTML, CSS and particularly js skills, I created the responsive website German verbs with Prepositions. German verbs with Prepositions is a website with a game and a quiz to learn the German verbs with Prepositions.
@@ -71,7 +69,6 @@ How can a person learning German learn which preposition goes with which verb?
 To learn a language, repetition is the key and, in my opinion, boredom is the biggest obstacle.
 
 It is thus important to find ways to avoid boredom and games can be very useful.
-
 
 Another idea to develop this website is to learn by matching verbs using the same preposition.
 
@@ -110,7 +107,6 @@ Learners of German, especially those who want to improve their knowledge of Germ
 <h3 align="center"><img src="assets/images/wireframe-rules.png"></h3>
 </details>
 
-
 # Features 
 ## Composition of the website
 The site is composed of 3 pages. The home page is a game called Memo game which contains links to another page which is a quiz and a last page which contains the rules and explanations about the site.
@@ -136,7 +132,6 @@ The German Verbs with Prepositions Memo Game is inspired by memory card games wh
   - When the pair matches, the event listener is removed from the matched cards. When the pair does not match the cards are turned back to allow to select a new pair.
   - Cards are randomly distributed by giving a random number to order each card. Giving random number between 1 and 6 would tend to place the pairs close to each other. For example, if all the cards received the number 2 randomly, the default position would be kept.  The numbers assigned to each card randomly is over 6 (by multiplying the number of cards by the number “limitBiais”). The aim it to limit that Bias.
 
-
 ## Quiz
 The quiz asks to find the right preposition associated with the verb. It has the particularity that in case of wrong answer, the player will receive a feedback with the right answer (the right preposition) and also a list of verbs that have the same preposition. It contains 8 questions and the number of correct answers is indicated in the upper right corner. At the end of the quiz, the player receives feedback on the number of correct answers.
 
@@ -154,13 +149,16 @@ The quiz asks to find the right preposition associated with the verb. It has the
 - When a wrong answer is given, a feedback with the correct answer is displayed. Verbs using the same preposition are also displayed. If the list of available verbs is 4 or under, all the verbs are displayed. If the list of verbs is over 4, a shift number (“shiftValue”) randomly gotten is used to not always show the same first 4 verbs.  
 - At the end of the quiz, a feedback with the number of correct answers is given.
 
-
 ## Background and rules
 This page explains the purpose of the games and the rules.
 <details>
 <summary>Picture of the Background and rules here</summary>
 <h3 align="center"><img src="assets/images/rules.png"></h3>
 </details>
+
+## Future Features
+- Have larger grids with more pairs for the Memo game.
+- Allow the player to choose the size of the grid for the Memo game.
 
 # Technologies used
 ## Languages used
@@ -196,8 +194,6 @@ This page explains the purpose of the games and the rules.
 - [Crop-video](https://crop-video.com/) | used to crop the video to present the website in the read me file
 
 - [Ezgif](https://ezgif.com/optimize/ezgif-2-af1b3b441270.gif) |  used to transform the video into gif to present the website in the read me file
-
-
 
 # Tests
 ## Code validation
@@ -260,7 +256,6 @@ The website has been deployed with GitHub. The project was stored in GitHub.
 - Type git clone, and then paste the URL you copied.
 - Press Enter. Your local clone will be created.
 
-
 # Credits
 ## Theme Colors
 The colors of the theme were inspired by the palettes : [Color Palette Ideas from Horizon Sky Shore Image](https://icolorpalette.com/imagepalette/color-palette-ideas-from-horizon-sky-shore-image-2)
@@ -297,9 +292,17 @@ The code was adapted from the readme file from my first project which was adapte
 
 [Code Institute](https://github.com/Code-Institute-Solutions/SampleREADME)
 
-
 # Conclusion
+This project has allowed me to deepen and consolidate my knowledge of HTML, CSS and especially js. I also hope it shows that I have a good foundation in these languages.
+The Memo game is an original idea I had for this project and it came from the connection of my desire to improve my German skills and to code. Regarding the quiz, I had already made a basic quiz in 2020 with the help of the Udemy course mentioned in the credit section. The implementation of feedback is a new idea I had to match the idea of the website (learning by matching verbs with the same preposition) and I believe this website could be a good tool to help learn German.
+Having prior knowledge of coding language for data analysis in a scientific context, I had a lot of fun working with the data in the verb + preposition list created for the website.
+Compared to the first project, I had a very clear idea of the project before I started coding, which made it much easier to move forward.
+
+Overall, I had fun coding this project, started sharing it with my friends and mentor and was very happy to see the interest and excitement for the Memo game in German. I also learned a lot, which was the original goal of this project, but I admit that seeing people use my work is a much better reward. 
 
 # Acknowledgments
+- My mentor, Nishant Kumar, for guiding me through the project, for giving me feedback to improve the code and content of the website, and for his enthusiasm for the project.
 
+- The Slack community for clarifying certain concepts, sharing tips and links.
 
+- The mentors in Code institutes for helping with the codes.
