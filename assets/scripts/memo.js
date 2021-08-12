@@ -6,19 +6,19 @@ import {
 } from './list.js';
 
 // variables
-let arrayPrepositions = []; // array should look like something like ["auf", "auf", "an", "von", "mit", ....] it has the length of verbsWithPrepositions
-let prepositionsListUnique = []; // array should look like something like ["auf", "an", "von", "mit", "für", "über"] each preposition appears only once
-let prepositionsListUniqueIndex = []; // array should look like something like [5, 3, 4]; The number are the index of the preposition from the array prepositionsListUnique
-let gamePrepositions = []; // array should look like something like [5, 3, 4]; ["für", "mit", "von"]. The game will use this prepositions (they are choosen randomly) so each new game will be new prepositions/oreder
-let indexPrepositionGame = [ [],[],[] ]; // arrays should look like something like [Array(5), Array(4), Array(6)]; The first array (i.e Array(5)) contains the index of verb with the first gamePreposition (the index refers to verbsWithPrepositions)
-let indexPrepositionInPairGame = []; // arrays should look like something like  [11, 8, 4, 13, 2, 6]. Here 11 and 8 refers to Position in verbsWithPrepositions where verbs have the same preposition. 4 and 13 to two other verbs with same preposition and 2 and 6  to two other verbs with same preposition
+let arrayPrepositions = []; 
+let prepositionsListUnique = []; 
+let prepositionsListUniqueIndex = []; 
+let gamePrepositions = []; 
+let indexPrepositionGame = [ [],[],[] ]; 
+let indexPrepositionInPairGame = []; 
 
 const verbToFill = document.getElementsByClassName("front");
 const prepositionToFill = document.getElementsByClassName("back");
 
-let numCards = 6 //it is also the number of verbs
-let numPairs = numCards / 2 
-let limitBiais = 10 // in order to limit the bias of pairs following each other
+let numCards = 6; 
+let numPairs = numCards / 2;
+let limitBiais = 10;
 
 //make and array with all the prepositions.
 function makeArrayPrepositions() {
@@ -45,7 +45,7 @@ function choosePrepositionListUnique() {
     while (prepositionsListUniqueIndex[2] == prepositionsListUniqueIndex[0] || prepositionsListUniqueIndex[2] == prepositionsListUniqueIndex[1]) { //get different third preposition
         prepositionsListUniqueIndex[2] = Math.floor(Math.random() * prepositionsListUnique.length);
     } //get different third preposition if is the same as the first or second
-} //close function choosePreposition()
+} 
 choosePrepositionListUnique();
 
 // get the prepositions
@@ -72,7 +72,7 @@ function getIndexPreposition() {
         if (verbsWithPrepositions[i].preposition == gamePrepositions[2]) {
             indexPrepositionGame[2].push(i);
         }
-    } //end for loop
+    } 
 
     // in case there is no pair available in the list, a new game will start. It because otherwise page will look for the pair in a while loop and thus the page will not load.
     if (indexPrepositionGame[0].length == 1 || indexPrepositionGame[1].length == 1 || indexPrepositionGame[2].length == 1) {
@@ -81,7 +81,7 @@ function getIndexPreposition() {
     }
 
     chooseTwoPrepositions();
-} //end function
+} 
 getIndexPreposition();
 
 // Now we need only pairs. 
@@ -138,7 +138,7 @@ function pair() {
 
     if (firstCard === secondCard) {
         return;
-    }; // it is if the person clicks twice on the same card, the player can choose othercards
+    } // it is if the person clicks twice on the same card, the player can choose othercards
 
     if (firstCard.getAttribute('data-attr') === secondCard.getAttribute('data-attr')) {
         firstCard.removeEventListener('click', returnCard);

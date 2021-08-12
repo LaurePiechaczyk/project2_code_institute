@@ -4,21 +4,21 @@ import {
 } from './list.js';
 
 // variables 
-let verbIndex; // It is just a number. It is the index of the verb that will be used for the quizz as question
-let arrayPrepositions; // array should look like something like ["auf", "auf", "an", "von", "mit", ....] it has the length of verbsWithPrepositions
-let prepositionsListUnique; // array should look like something like ["auf", "an", "von", "mit", "für", "über"] each preposition appears only once
-let preposition1; // should look like "auf". This preposition is the correct one
-let preposition2; // a preposition randomly chosen which is different from the preposition1
-let preposition3; // a preposition randomly chosen which is different from the preposition1 and the preposition2
+let verbIndex; 
+let arrayPrepositions; 
+let prepositionsListUnique; 
+let preposition1; 
+let preposition2;
+let preposition3; 
 const choices = document.querySelectorAll('.choice');
 let score = 0;
 let questionCounter = 1;
-let usedVerb = []; // it is array with the the index of the verbs that have been used. It is to avoid using twice the same verb
-let verbsForFeedback = []; // array with the verbs that can be used for feedback
+let usedVerb = []; 
+let verbsForFeedback = []; 
 
-let numChoices = 3
-let numQuestions = 8
-let limitBiais = 10 // in order to limit the bias that the correct answer would tend to be in the first position then second and less often in the third position
+let numChoices = 3;
+let numQuestions = 8;
+let limitBiais = 10; 
 
 //get a question randomly (get the indexposition in verbsWithPrepositions)
 function getVerbIndex() {
@@ -89,7 +89,7 @@ function letChoose() {
         choice.addEventListener('click', responseToTheChoice);
     });
 }
-letChoose()
+letChoose();
 
 //don't let the player choose (after one choice there is a time where we don't want to allow the player to choose again)
 function blockChoose() {
@@ -144,13 +144,13 @@ function feedback() {
     if(verbsForFeedback.length > numVerbFeedbackDisplayed) {
         for (let i = 0; i < numVerbFeedbackDisplayed ; i++) {
             document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + shiftValue]].verb; // adding "shiftValue" permits to not have always the same verbs displayed.
-            };
-    }; 
+            }
+    }
     if(verbsForFeedback.length <= numVerbFeedbackDisplayed) { // when there are not 4 verbs for feedback, only the available verbs will be used
         for (let i = 0; i < verbsForFeedback.length ; i++) {
         document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i]].verb;  // no schift value here because the available verbs are not long enough to be shifted
-        }; 
-    } ; 
+        }
+    } 
 
     document.getElementById("next-question").addEventListener("click", nextQuestion);
 }
@@ -191,3 +191,6 @@ function incrementQuestionCounter() {
     questionCounter += 1;
     document.getElementById('question-number').innerText = questionCounter;
 }
+
+
+

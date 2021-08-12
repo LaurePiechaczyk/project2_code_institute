@@ -166,7 +166,19 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 - [W3C CSS Validator | Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Flaurepiechaczyk.github.io%2Fproject2_code_institute%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
+Javascipt code was tested using [jshint](https://jshint.com/) and no error was found with /*jshint esversion: 6 */
+
 ## Testing User Stories
+  - As a Visitor, I want to easily understand the main purpose of the site.
+    - On the homepage, the title describes the topic and the Memo game is displayed with verbs and has the typical form of a game.
+  - As a Visitor, I want to start playing directly.
+    - The memo game is displayed on the homepage and the user can directly start playing.
+  - As a Visitor, I want to learn and get motivation.
+    - The game and quiz are designed to be fun to learn and will hopefully help to maintain the desire to improve German skills while actually improving in the area of German verbs with prepositions.
+  - As a Visitor, I want to be able to easily navigate throughout the site.
+    - The Website is kept simple with buttons or underlined links to navigate.
+  - As a Visitor, I want to access the site across a range of devices.
+    - The website is designed to be suitable for all devices.
 
 ## Test on browsers
 The website was tested on computers using the browsers:
