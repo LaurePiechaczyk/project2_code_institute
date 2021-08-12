@@ -10,6 +10,50 @@ To do this, I created a game to learn German verbs with prepositions.
 # Table of content
 <details>
 <summary>Open the Table of Contents here</summary>
+
+[About The Project](#about-the-project)
+
+- [Background to understand the purpose of the game](#background-to-understand-the-purpose-of-the-game)
+
+- [Idea behind the website to help learn German](#idea-behind-the-website-to-help-learn-german)
+
+
+[Target audience](#target-audience)  
+
+[User Experience](#user-experience)
+- [Visitor Goals](#visitor-goals)
+- [Wireframes](#Wireframes)
+
+[Features](#features)  
+- [Composition of the website](#composition-of-the-website)
+- [Memo Game](#memo-game)
+- [Quiz](#quiz)
+[Background and rules](#background-and-rules)
+
+[Technologies used](#technologies-used)
+- [Languages used](#languages-used)
+- [Frameworks and Programs used](#frameworks-and-programs-used)
+
+[Tests](#tests)
+- [Code validation](#code-validation)
+- [Testing User Stories](#testing-user-stories)
+- [Test on browsers](#test-on-browsers)
+- [Test on devices and Responsiveness](#test-on-devices-and-responsiveness)
+
+[Deployment](#deployment) 
+- [GitHub Pages](#github-pages)
+- [Making a Local Clone](#making-a-local-clone)
+
+[Credits](#credits)
+- [Theme Colors](#theme-colors)
+- [Website content](#website-content)
+- [Code credits](#code-credits)
+
+[Conclusion](#conclusion)
+
+[Acknowledgments](#acknowledgments)
+
+
 </details>
 
 
@@ -37,7 +81,7 @@ That's what this site is all about: Fun + matching verbs with same preposition
 Learners of German, especially those who want to improve their knowledge of German verbs with prepositions. 
 
 # User Experience
-- ### Visitor Goals
+## Visitor Goals
   - As a Visitor, I want to easily understand the main purpose of the site.
   - As a Visitor, I want to start playing directly.
   - As a Visitor, I want to learn and get motivation.
@@ -111,7 +155,7 @@ The quiz asks to find the right preposition associated with the verb. It has the
 - At the end of the quiz, a feedback with the number of correct answers is given.
 
 
-- ### Background and rules
+## Background and rules
 This page explains the purpose of the games and the rules.
 <details>
 <summary>Picture of the Background and rules here</summary>
@@ -156,7 +200,7 @@ This page explains the purpose of the games and the rules.
 
 
 # Tests
-## Code validation and issues found
+## Code validation
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 - [W3C Markup Validation Memo Game | Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Flaurepiechaczyk.github.io%2Fproject2_code_institute%2Findex.html)
 
