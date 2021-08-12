@@ -14,7 +14,7 @@ To do this, I created a game to learn German verbs with prepositions.
 
 
 # About the project 
-In order to practice, develop and demonstrate my HTML, CSS and particurlarly js skills, I created the responsive website German verbs with Prepositions. German verbs with Prepositions is a website with a game and a quizz to learn the German verbs with Prepositions.
+In order to practice, develop and demonstrate my HTML, CSS and particularly js skills, I created the responsive website German verbs with Prepositions. German verbs with Prepositions is a website with a game and a quiz to learn the German verbs with Prepositions.
 I have chosen this topic because I am learning German myself.
 
 ## Background to understand the purpose of the game
@@ -71,7 +71,7 @@ Learners of German, especially those who want to improve their knowledge of Germ
 ## Composition of the website
 The site is composed of 3 pages. The home page is a game called Memo game which contains links to another page which is a quiz and a last page which contains the rules and explanations about the site.
 
-- ### Memo Game
+## Memo Game
 The German Verbs with Prepositions Memo Game is inspired by memory card games where the player must turn over cards to find pairs of identical pictures. Instead of finding pairs of pictures, the player of the German memo game must find pairs of verbs with the same preposition.
 
 <details>
@@ -79,13 +79,37 @@ The German Verbs with Prepositions Memo Game is inspired by memory card games wh
 <h3 align="center"><img src="assets/images/memo-game.png"></h3>
 </details>
 
-- ### Quiz
+### Main logical steps to build the Memo Game
+- Part 1: Main steps to get pairs of verbs with preposition:
+  - Get an array with all the preposition (“arrayPrepositions”)
+  - Get a list of prepositions without duplicate in an array (“prepositionsListUnique”)
+  - Get randomly 3 prepositions in an array because there are 3 pairs of cards (“gamePrepositions”).
+  - For each game preposition, get 2 verbs with the preposition (“IndexPrepositionInPairGame”). The output is an array with 6 numbers. The 2 firsts numbers are numbers to retrieve the verbs with the first preposition, the next 2 numbers for the second preposition and the last 2 numbers for the third preposition: [index_for_verb1_prep1, index_for_verb2_prep1, index_for_verb1_prep2, index_for_verb2_prep2, index_for_verb1_prep3, index_for_verb2_prep3] 
+
+- Part2:  Make the game working
+  This part was adapted from [20-projets-en-javascript by Enzo Ustariz](https://www.udemy.com/course/20-projets-en-javascript)
+  - To return the card, rotations of 180° was used. 
+  - When the pair matches, the event listener is removed from the matched cards. When the pair does not match the cards are turned back to allow to select a new pair.
+  - Cards are randomly distributed by giving a random number to order each card. Giving random number between 1 and 6 would tend to place the pairs close to each other. For example, if all the cards received the number 2 randomly, the default position would be kept.  The numbers assigned to each card randomly is over 6 (by multiplying the number of cards by the number “limitBiais”). The aim it to limit that Bias.
+
+
+## Quiz
 The quiz asks to find the right preposition associated with the verb. It has the particularity that in case of wrong answer, the player will receive a feedback with the right answer (the right preposition) and also a list of verbs that have the same preposition. It contains 8 questions and the number of correct answers is indicated in the upper right corner. At the end of the quiz, the player receives feedback on the number of correct answers.
 
 <details>
 <summary>Picture of the Quiz here</summary>
 <h3 align="center"><img src="assets/images/quiz.png"></h3>
 </details>
+
+### Main logical steps to build the Quiz
+- A verb is chosen randomly and can be chosen only once during the game. 
+- The verb is then displayed as question and the correct preposition as first choice.
+- 2 different prepositions are randomly selected and displayed as second and third choices. 
+- The choices are then displayed randomly using the same system as the cards in the memo game. As in the memo game, the “limitBiais” number is used to limit bias that the correct answer would tend to be placed less often in the last positions of choices. For example, if the order number is chosen randomly between 1 and 3 for each choice, it is possible that all choices get the number 3 and the choices would be displayed as the default (i.e. the correct answer first). 
+- When a correct answer is chosen, the quiz continues and display a new question while increasing the score.
+- When a wrong answer is given, a feedback with the correct answer is displayed. Verbs using the same preposition are also displayed. If the list of available verbs is 4 or under, all the verbs are displayed. If the list of verbs is over 4, a shift number (“shiftValue”) randomly gotten is used to not always show the same first 4 verbs.  
+- At the end of the quiz, a feedback with the number of correct answers is given.
+
 
 - ### Background and rules
 This page explains the purpose of the games and the rules.
@@ -113,7 +137,7 @@ This page explains the purpose of the games and the rules.
 
 - [Word](https://en.wikipedia.org/wiki/Microsoft_Word) | used to correct the grammar
 
-- [am I responsive?](http://ami.responsivedesign.is/) | used to look at the responsiveness of the website and to present an introductory picture in the readme file
+- [am I responsive?](http://ami.responsivedesign.is/) | used to look at the responsiveness of the website 
 
 - [W3C Markup Validation Service](https://validator.w3.org/) | used to check the validity of the HTML code
 
@@ -152,11 +176,14 @@ The website was tested on computers using the browsers:
 - [Microsoft edge](https://en.wikipedia.org/wiki/Microsoft_Edge)
 - [Safary](https://en.wikipedia.org/wiki/Safari_(software))
 
-## Test on devices
+## Test on devices and Responsiveness
 [Chrome DevTools](https://developer.chrome.com/docs/devtools/) was used to see how the site looks like on various phones and tablets. Additionally, after deployment the website was tested on various phones: iphone11, iphone10, Samsung Galaxy A3.
 
-## Responsiveness
+Responsiveness was tested with [am I responsive?](http://ami.responsivedesign.is/).
+<details>
+<summary>Am I responsive picture</summary>
 <h3 align="center"><img src="assets/images/main-picture.png"></h3>
+</details>
 
 # Deployment
 ## GitHub Pages
