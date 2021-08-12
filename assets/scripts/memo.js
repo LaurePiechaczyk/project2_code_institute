@@ -56,9 +56,11 @@ function gamePrepositionsArray() {
 }
 gamePrepositionsArray();
 
-// get index preositions. it arrives in an arrays nested in array (indexPrepositionGame)
-// but if more than 2 verbs with the same preposition the array will be longer than 2 
-// for the game we need only pairs. Pairs will be done in a following array (indexPrepositionInPairGame)
+/* 
+get index preositions. it arrives in an arrays nested in array (indexPrepositionGame)
+but if more than 2 verbs with the same preposition the array will be longer than 2 
+for the game we need only pairs. Pairs will be done in a following array (indexPrepositionInPairGame)
+*/
 function getIndexPreposition() {
     for (let i = 0; i < verbsWithPrepositions.length; i++) {
         if (verbsWithPrepositions[i].preposition == gamePrepositions[0]) {
@@ -92,9 +94,8 @@ function chooseTwoPrepositions() {
         }
         indexPrepositionInPairGame.push(indexPrepositionGame[i][firstPrepposition]);
         indexPrepositionInPairGame.push(indexPrepositionGame[i][secondPrepposition]);
-    } //close for loop
-} // close function
-//chooseTwoPrepositions();
+    } 
+} 
 
 // displaying verbs and preopsitions in the HTML. Note: random position using grid property changing order ramdomly.
 function displayVerbsAndPrepositions() {
@@ -123,7 +124,7 @@ function returnCard() {
     if (!cardIsReturned) { // it is like saying cardIsReturned == false. It means that no card has been turned. When one card has already been turned it would be cardIsReturned == True
         cardIsReturned = true;
         firstCard = this;
-        return; // if it is the first card which is returned, the function is stopped here to let the player returning another card.
+        return; // if it is the first card which is returned, the function stopped here to let the player returning another card.
     }
 
     secondCard = this; // at this point of the function, we have 2 cards that have been returned. We can then check if they are correct pairs

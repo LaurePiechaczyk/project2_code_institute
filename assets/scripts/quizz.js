@@ -36,9 +36,8 @@ function displayVerb() {
     document.getElementById("question").innerHTML = verbsWithPrepositions[verbIndex].verb;
 }
 displayVerb();
-
-//#######  Get the good preposition + two other prepositions #######
-//make and array with all the prepositions. 
+  
+//make and array with all the prepositions.
 function makeArrayPrepositions() {
     arrayPrepositions = [];
     for (let i = 0; i < verbsWithPrepositions.length; i++) {
@@ -84,7 +83,7 @@ function randomCardPositionChoices() {
 }
 randomCardPositionChoices();
 
-//let the player choose a choice
+//let the player choose 
 function letChoose() {
     choices.forEach(choice => {
         choice.addEventListener('click', responseToTheChoice);
@@ -92,7 +91,7 @@ function letChoose() {
 }
 letChoose()
 
-//don t let the player choose (after one choice there is a time where we don t want to allow the player to choose again)
+//don't let the player choose (after one choice there is a time where we don't want to allow the player to choose again)
 function blockChoose() {
     choices.forEach(choice => {
         choice.removeEventListener('click', responseToTheChoice);
@@ -120,9 +119,9 @@ function getVerbsForFeedback() {
         if (verbsWithPrepositions[i].preposition == preposition1) {
             if (i !== verbIndex) { // it is to avoid to have the verb used as question displayed in feedback
                 verbsForFeedback.push(i);
-            } //close second if
-        } // close first if
-    } //close for
+            } 
+        } 
+    } 
 }
 
 function feedback() {
@@ -140,18 +139,18 @@ function feedback() {
 
     for (let i = 0; i < numVerbFeedbackDisplayed; i++) {
         document.getElementsByClassName("verb-feedback")[i].innerHTML = ""; // remove the verbs that could have been previouslly added in case of a previous uncorrect answer
-    } // close for loop
+    } 
 
     if(verbsForFeedback.length > numVerbFeedbackDisplayed) {
         for (let i = 0; i < numVerbFeedbackDisplayed ; i++) {
             document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i + shiftValue]].verb; // adding "shiftValue" permits to not have always the same verbs displayed.
-            }; // close for loop
-    }; // close if 
+            };
+    }; 
     if(verbsForFeedback.length <= numVerbFeedbackDisplayed) { // when there are not 4 verbs for feedback, only the available verbs will be used
         for (let i = 0; i < verbsForFeedback.length ; i++) {
         document.getElementsByClassName("verb-feedback")[i].innerHTML = verbsWithPrepositions[verbsForFeedback[i]].verb;  // no schift value here because the available verbs are not long enough to be shifted
-        }; // close for loop
-    } ; // close if 
+        }; 
+    } ; 
 
     document.getElementById("next-question").addEventListener("click", nextQuestion);
 }
