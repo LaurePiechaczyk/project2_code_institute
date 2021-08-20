@@ -15,8 +15,14 @@
 <h1>German verbs with preposition</h1>
 <h2>The Memo Game</h2>
 <p>The game is intuitive, you can start playing. For explanations and rules <a href="rules.html"><u>click me</u> </a></p>
+
 <div class="button" id="start-new-memo">Start a new Memo Game</div>
 <div class="button"><a href="quizz.html">Go to Quiz</a></div>
+
+<div class="check-box-english">
+    <label for="english-traduction">English traduction:</label> 
+    <input type="checkbox" id="english-traduction">
+</div>
 
 <div id="memory-container">
     
@@ -25,10 +31,12 @@
         <div class="card" data-attr="preposition1">
             <div class="double-face">
                 <div class="front">
-                    <p>Verb</p>
+                    <p class="verb">Verb</p> 
+                    <p class="english"></p>
                 </div>
                 <div class="back">
-                    <p>preposition</p>
+                    <p class="preposition">preposition</p>
+                    <p class="entire">entire</p>
                 </div> 
             </div>
         </div>
@@ -36,10 +44,12 @@
         <div class="card" data-attr="preposition1">
             <div class="double-face">
                 <div class="front">
-                    <p>Verb</p>
+                    <p class="verb">Verb</p>
+                    <p class="english"></p>
                 </div>
                 <div class="back">
-                    <p>preposition</p>
+                    <p class="preposition">preposition</p>
+                    <p class="entire">entire</p>
                 </div> 
             </div>
         </div>
@@ -47,10 +57,12 @@
         <div class="card" data-attr="preposition2">
             <div class="double-face">
                 <div class="front">
-                    <p>Verb</p>
+                    <p class="verb">Verb</p>
+                    <p class="english"></p>
                 </div>
                 <div class="back">
-                    <p>preposition</p>
+                    <p class="preposition">preposition</p>
+                    <p class="entire">entire</p>
                 </div> 
             </div>
         </div>
@@ -58,10 +70,12 @@
         <div class="card" data-attr="preposition2">
             <div class="double-face">
                 <div class="front">
-                    <p>Verb</p>
+                    <p class="verb">Verb</p>
+                    <p class="english"></p>
                 </div>
                 <div class="back">
-                    <p>preposition</p>
+                    <p class="preposition">preposition</p>
+                    <p class="entire">entire</p>
                 </div> 
             </div>
         </div>
@@ -69,10 +83,12 @@
         <div class="card" data-attr="preposition3">
             <div class="double-face">
                 <div class="front">
-                    <p>Verb</p>
+                    <p class="verb">Verb</p>
+                    <p class="english"></p>
                 </div>
                 <div class="back">
-                    <p>preposition</p>
+                    <p class="preposition">preposition</p>
+                    <p class="entire">entire</p>
                 </div> 
             </div>
         </div>
@@ -80,10 +96,12 @@
         <div class="card" data-attr="preposition3">
             <div class="double-face">
                 <div class="front">
-                    <p>Verb</p>
+                    <p class="verb">Verb</p>
+                    <p class="english"></p>
                 </div>
                 <div class="back">
-                    <p>preposition</p>
+                    <p class="preposition">preposition</p>
+                    <p class="entire">entire</p>
                 </div> 
             </div>
         </div>
@@ -91,6 +109,6 @@
 </div>
 
 <script type="module" src="assets/scripts/list.js"></script>
-<script type="module" src="assets/scripts/memo.js"></script>
+<script type="module" src="assets/scripts/memo.js"></script> 
 </body>
 </html>

@@ -32,6 +32,11 @@ body {
 
 /*  #######   Memo Part #######  */
 
+.check-box-english {
+  float: none;
+  padding-top: 10px;
+}
+
 #memory-container {
     display: flex;
     margin-top: 20px;
@@ -64,11 +69,24 @@ body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   position: absolute;  
+  letter-spacing: 2px;
 }
 
 .front{
     background: #e4d4ac;  
-    font-size: 18px;
+    font-size: 20px;
+}
+
+.english, .entire {
+  font-style:italic;
+  position: absolute; 
+  color: #6d6b6b;
+  bottom: 0px;
+  font-size: 15px;
+}
+
+.entire {
+  font-size: 13px;
 }
 
 .back {

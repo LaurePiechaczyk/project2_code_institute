@@ -13,8 +13,11 @@ let gamePrepositions = [];
 let indexPrepositionGame = [ [],[],[] ]; 
 let indexPrepositionInPairGame = []; 
 
-const verbToFill = document.getElementsByClassName("front");
-const prepositionToFill = document.getElementsByClassName("back");
+const verbToFill = document.getElementsByClassName("verb");
+const checkBoxEnglish = document.getElementById("english-traduction");
+const englishToFill = document.getElementsByClassName("english");
+const entireToFill = document.getElementsByClassName("entire");
+const prepositionToFill = document.getElementsByClassName("preposition");
 
 let numCards = 6; 
 let numPairs = numCards / 2;
@@ -102,9 +105,26 @@ function displayVerbsAndPrepositions() {
     for (let i = 0; i < numCards; i++) {
         verbToFill[i].innerHTML = verbsWithPrepositions[indexPrepositionInPairGame[i]].verb;
         prepositionToFill[i].innerHTML = verbsWithPrepositions[indexPrepositionInPairGame[i]].preposition;
+        entireToFill[i].innerHTML = verbsWithPrepositions[indexPrepositionInPairGame[i]].entire;
     }
 }
 displayVerbsAndPrepositions();
+
+//to display the english traduction
+function displayEnglishTrad() {
+    if (this.checked == true){
+        for (let i = 0; i < numCards; i++) {  
+            englishToFill[i].innerHTML = verbsWithPrepositions[indexPrepositionInPairGame[i]].english;
+        }
+      } 
+      else {
+        for (let i = 0; i < numCards; i++) {  
+            englishToFill[i].innerHTML = "";
+        }
+    }
+}
+//to display the english traduction only when the box is checked
+checkBoxEnglish.addEventListener('click', displayEnglishTrad);
 
 // ########## PART2  Make the game working ###########
 const cards = document.querySelectorAll('.card');
@@ -168,3 +188,4 @@ document.getElementById("start-new-memo").addEventListener('click', startNewMemo
 function startNewMemo() {
     window.location.reload();
 }
+
