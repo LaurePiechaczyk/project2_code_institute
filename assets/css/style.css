@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Lato:100,200,300,400,500,600,700');
+
 h1, h2,h3, p {
     color : #3a3a3a;
     text-align: center;
@@ -5,8 +7,20 @@ h1, h2,h3, p {
     margin-top: 10px;
 }
 
+h1, h2,h3 {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+p {
+  font-family: "Lato";
+  font-weight: 400
+}
+
 body {
   background-color: #f4f4f4;
+  font-family: "Lato";
+  font-weight: 400;
 }
 
 a {
@@ -69,7 +83,7 @@ body {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   position: absolute;  
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .front{
@@ -215,7 +229,7 @@ body {
 
 #end-game {
   visibility: hidden;
-  margin-top: -390px;
+  margin-top: -400px;
   margin-left: -100px;
   width: 600px;
   height: 460px;
@@ -294,6 +308,10 @@ h2 {
 }
 
 /*#######   Memo Part #######  */
+.check-box-english {
+  padding-top: 20px;
+}
+
 #grid-memo {
     grid-template: repeat(3, 150px) / repeat(2, 150px);
 }
