@@ -70,8 +70,9 @@ body {
 }
 
 .card:hover {
-  cursor: pointer;
+  cursor: url("../images/pointer.png"), auto;
 }
+
 
 .front, .back {
   border-radius: 5px; 
