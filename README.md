@@ -5,7 +5,7 @@
 German verbs with Prepositions is a website built as part of a project for the [code institute](https://codeinstitute.net/) (training to become a web developer) to develop and show my skills in javascript. 
 
 To do this, I created a game to learn German verbs with prepositions.
-<h3 align="center"><img src="assets/images/gif-show-website.gif"></h3>
+<h3 align="center"><img src="assets/images/gif-website.gif"></h3>
 
 # Table of content
 <details>
@@ -28,7 +28,7 @@ To do this, I created a game to learn German verbs with prepositions.
 - [Memo Game](#memo-game)
 - [Quiz](#quiz)
 - [Background and rules](#background-and-rules)
-- [Future Features](future-feature)
+- [Future Features](#future-feature)
 
 [Technologies used](#technologies-used)
 - [Languages used](#languages-used)
