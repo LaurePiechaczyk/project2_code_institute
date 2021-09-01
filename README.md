@@ -195,6 +195,8 @@ This page explains the purpose of the games and the rules.
 
 - [Ezgif](https://ezgif.com/optimize/ezgif-2-af1b3b441270.gif) |  used to transform the video into gif to present the website in the read me file
 
+- [Inkscape](https://inkscape.org/) | used to create the favicon
+
 # Tests
 ## Code validation
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
