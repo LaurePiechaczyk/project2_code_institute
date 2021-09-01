@@ -305,4 +305,4 @@ Overall, I had fun coding this project, started sharing it with my friends and m
 
 - The Slack community for clarifying certain concepts, sharing tips and links.
 
-- The mentors in Code institutes for helping with the codes.
+- The tutors in Code institutes for helping with the codes.
