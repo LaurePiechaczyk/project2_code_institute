@@ -40,6 +40,7 @@ body {
   display: inline-flex;
   text-decoration: none;
 }
+
 .button:hover {
   cursor: pointer;
 }
@@ -72,7 +73,6 @@ body {
 .card:hover {
   cursor: url("../images/pointer.png"), auto;
 }
-
 
 .front, .back {
   border-radius: 5px; 
@@ -250,6 +250,7 @@ body {
 .color-correct {
   background-color:darkcyan ;
 }
+
 .color-uncorrect {
   background-color: darkred;
 }
@@ -263,7 +264,6 @@ body {
   margin: 20px auto;
 }
 
-
 /* #########     responsivness           ########### */
 @media screen and (max-width: 650px) { 
 
@@ -272,7 +272,7 @@ body {
     grid-template: repeat(2, 170px) / repeat(3, 170px);
 }
 
-  /*  #######   Quizz Part #######  */
+/*  #######   Quizz Part #######  */
 #quizz-container {
     width: 500px;
 }

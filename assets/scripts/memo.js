@@ -188,4 +188,3 @@ document.getElementById("start-new-memo").addEventListener('click', startNewMemo
 function startNewMemo() {
     window.location.reload();
 }
-
