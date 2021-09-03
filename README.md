@@ -234,7 +234,7 @@ The website was tested on computers using the browsers:
 [Chrome DevTools](https://developer.chrome.com/docs/devtools/) was used to see how the site looks like on various phones and tablets. Additionally, after deployment the website was tested on various phones: iphone11, iphone10, Samsung Galaxy A3.
 
 Responsiveness was tested with [am I responsive?](http://ami.responsivedesign.is/).
-<details>
+<details open>
 <summary>Am I responsive picture</summary>
 <h3 align="center"><img src="assets/images/main-picture.png"></h3>
 </details>
